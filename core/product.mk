@@ -16,12 +16,7 @@
 
 #
 # Functions for including AndroidProducts.mk files
-# PRODUCT_MAKEFILES is set up in AndroidProducts.mks.
-# Format of PRODUCT_MAKEFILES:
-# <product_name>:<path_to_the_product_makefile>
-# If the <product_name> is the same as the base file name (without dir
-# and the .mk suffix) of the product makefile, "<product_name>:" can be
-# omitted.
+#
 
 #
 # Returns the list of all AndroidProducts.mk files.
@@ -65,6 +60,7 @@ endef
 #
 
 _product_var_list := \
+    PRODUCT_BUILD_PROP_OVERRIDES \
     PRODUCT_NAME \
     PRODUCT_MODEL \
     PRODUCT_LOCALES \
@@ -95,7 +91,8 @@ _product_var_list := \
     PRODUCT_RESTRICT_VENDOR_FILES \
     PRODUCT_VENDOR_KERNEL_HEADERS \
     PRODUCT_FACTORY_RAMDISK_MODULES \
-    PRODUCT_FACTORY_BUNDLE_MODULES
+    PRODUCT_FACTORY_BUNDLE_MODULES \
+    $(PRODUCT_BUILD_PROP_OVERRIDES)
 
 
 define dump-product
