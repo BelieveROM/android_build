@@ -408,11 +408,13 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.ShowProgress(0.5, 0)
   script.Print("")
-  script.Print("")
   script.Print("                Believe               ")
+  script.Print("                                      ")
   script.Print("               Eagle1967              ")
+  script.Print("             Jboyer-Johnny            ")
+  script.Print("            Stoney BadSeed            ")
   script.Print("")
-  script.Print("    The first early build of JB-4.3   ")
+  script.Print("             JellyBean-4.3            ")
   script.Print("")
   script.Print("     ,-,---.     .                    ")
   script.Print("      '|___/ ,-. |  . ,-. .  , ,-.    ")
@@ -420,14 +422,16 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("     `-^---' `-' `' ' `-' `'   `-'    ")
   script.Print("")
   script.Print("")
-  script.Print("     From the creator of Sourcery   ")
-  script.Print("")
+  script.Print("     From the creator's of Sourcery   ")
+  script.Print("                BETA-1              ")
 
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
   script.FormatPartition("/system")
   script.Mount("/system")
+  script.Print("Transforming Your Nexus")
+  script.Print("Don't Stop Believing")
   script.UnpackPackageDir("system", "/system")
 
   symlinks = CopySystemFiles(input_zip, output_zip)
@@ -445,7 +449,14 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   script.ShowProgress(0.2, 10)
   script.WriteRawImage("/boot", "boot.img")
-
+  script.Print("**************************************")
+  script.Print("*   ,-,---.     .                    *")
+  script.Print("*    '|___/ ,-. |  . ,-. .  , ,-.    *")
+  script.Print("*    ,|   \ |-' |  | |-' | /  |-'    *")
+  script.Print("*   `-^---' `-' `' ' `-' `'   `-'    *")
+  script.Print("**************************************")
+  script.Print("*******TRANSFORMATION COMPLETED*******")
+  script.Print("**************************************")
   script.ShowProgress(0.1, 0)
   device_specific.FullOTA_InstallEnd()
 
