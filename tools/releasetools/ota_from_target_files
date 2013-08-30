@@ -411,10 +411,11 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("                Believe               ")
   script.Print("                                      ")
   script.Print("               Eagle1967              ")
-  script.Print("             Jboyer-Johnny            ")
+  script.Print("            Jboyer-JohnnyB            ")
   script.Print("            Stoney BadSeed            ")
   script.Print("")
   script.Print("             JellyBean-4.3            ")
+  script.Print("            android-4.3_r2.2          ")
   script.Print("")
   script.Print("     ,-,---.     .                    ")
   script.Print("      '|___/ ,-. |  . ,-. .  , ,-.    ")
@@ -423,7 +424,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("")
   script.Print("")
   script.Print("     From the creator's of Sourcery   ")
-  script.Print("              BETA-2(Alpha)           ")
+  script.Print("                 BETA-2           ")
 
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
