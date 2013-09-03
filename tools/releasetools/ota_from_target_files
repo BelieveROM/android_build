@@ -424,7 +424,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("")
   script.Print("")
   script.Print("     From the creator's of Sourcery   ")
-  script.Print("                 BETA-2           ")
+  script.Print("                 BETA-3           ")
 
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
